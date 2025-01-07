@@ -1,4 +1,4 @@
-import "styled-components/native";
+import "styled-components";
 import theme from "../theme";
 
 declare module "styled-components" {
@@ -6,4 +6,3 @@ declare module "styled-components" {
 
   export interface DefaultTheme extends ThemeType {}
 }
-  
