@@ -1,13 +1,14 @@
-import { Loading } from "@components/Loading";
 import {
   Recursive_400Regular,
   Recursive_700Bold,
   useFonts,
 } from "@expo-google-fonts/recursive";
-import { Groups } from "@screens/Groups";
+import { NewGroup } from "@components/NewGroup";
+import { Loading } from "@components/Loading";
 import { ThemeProvider } from "styled-components";
 import theme from "./src/theme";
 import { StatusBar } from "react-native";
+import React from "react";
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Recursive_400Regular, Recursive_700Bold });
@@ -19,7 +20,7 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      {fontsLoaded ? <Groups /> : <Loading />}
+      {fontsLoaded ? <NewGroup /> : <Loading />}
     </ThemeProvider>
   );
 }
